@@ -1,0 +1,76 @@
+body
+{
+	margin:0;
+	padding: 0;
+	font-family: sans-serif;
+	background: url(../img/bk.jpg);/* 导入背景图 */
+	background-size: cover;
+}
+/* 编辑box的样式 */
+.box
+{
+	position:absolute;
+	top:50%;/*整个输入框以及文字部分的高度在界面的50%*/
+	left:50%;
+	transform:translate(-50%,-50%);/* 什么作用?? */
+	width:400px;
+	padding:40px;
+	background:rgba(0,0,0,.8);/* 出现黑色的背景框 */
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.5);/*出现阴影*/
+	border-radius: 10px; /*背景框的边角编程圆弧形*/
+}
+/* 编辑h2即Login字样的样式 */
+.box h2{
+	margin:0;
+	padding:0;
+	color:#fff;/* 修改了Login文本的颜色为白色 */
+	text-align: center;/* Login字样位于中央 */	
+}
+/* 编辑inputBox的样式,即password框 */
+.box .inputBox{
+	position: relative;
+}
+/* input是输入框,passwor和username是label,此处是编辑输入框样式 */
+.box .inputBox input{
+	width:100%; /* 输入框的宽度为与整个盒子的长度一样,为100% */
+	padding:10px 0; /* 输入框的宽度 */
+	font-size: 16px;
+	color:#fff;
+	letter-spacing: 1px;
+	margin-bottom:30px ;/* 字与上面的框之间的距离为10px */
+	border:none; /* 输入框没有边界线 */
+	border-bottom:1px solid #fff; /*输入框有底部的一条线*/
+	outline:none;
+	background: transparent;/* 设置输入框内部为透明 */		
+} 
+.box .inputBox label{
+	position:absolute;
+	top:0;
+	left:0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events:none;
+	transition: .5s;/* 设置延时时间，点击的时候，文本向上浮动*/
+}
+.box .inputBox input:focus~label,
+.box .inputBox input:valid~label 
+{
+	top:-23px;
+	left:0;
+	color:#03a9f4;
+	font-size: 12px;
+}
+
+.box input[type="Submit"]
+{
+	background:transparent;
+	border:none;
+	outline:none;
+	color:#fff;
+	background:#03a9f4;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius:5px ;
+}
