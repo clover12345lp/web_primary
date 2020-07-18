@@ -1,0 +1,9 @@
+git init在文件夹下创建仓库，为透明的文件夹，名称为.git
+git status 查看当前仓库的状态信息等
+git add 文件名(可多个,空格隔开,.代表当前目录下所有文件） 将文件添加到git的暂存区，由git管理
+git commit -m 名称 提交当前仓库的文件，名称为自定义
+git checkout 文件 恢复文件状态（就是用暂存区的文件覆盖当前编辑的文件）
+git rm --cached 文件 删除文件 
+git log 查看提交带本地仓库的文件
+git remote add 别名 仓库ssh路径 给仓库的ssh路径取一个别名
+git push 别名 分支名称 提交本地仓库的文件到远程仓库的分支
